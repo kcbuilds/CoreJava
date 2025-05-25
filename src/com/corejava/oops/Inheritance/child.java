@@ -4,7 +4,7 @@ public class child extends parent {
 
     public child(String name, int age) {
         super(name, age);
-        System.out.println("child");
+        System.out.println("cChild");
     }
 
     @Override
