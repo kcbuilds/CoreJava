@@ -9,6 +9,6 @@ public class child extends parent {
 
     @Override
     public void sayhello() {
-        System.out.println("Parent");
+        System.out.println("Parent love");
     }
 }
