@@ -61,7 +61,6 @@ public class PhaseOne {
         }
 
         // Question 6
-
         int date = 9;
         switch (date){
             case 1:{
