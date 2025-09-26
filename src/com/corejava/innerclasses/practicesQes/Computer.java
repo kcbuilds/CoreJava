@@ -1,3 +1,5 @@
+package com.corejava.innerclasses.practicesQes;
+
 public class Computer {
 
     // Non-static inner class
