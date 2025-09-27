@@ -1,4 +1,4 @@
-package controlflow;
+package com.corejava.controlflow;
 
 public class conditionalTest {
     public static void main(String[] args) {

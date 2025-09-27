@@ -1,4 +1,4 @@
-package datatypes;
+package com.corejava.practicequestion.datatypes;
 
 public class TestString {
     public static void main(String[] args) {
