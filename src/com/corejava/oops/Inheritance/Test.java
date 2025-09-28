@@ -12,5 +12,11 @@ public class Test {
         System.out.println(c.getName());
         System.out.println(p.getAge());
 
+        Vehicle vehicle = new Vehicle();
+        vehicle.drive();
+
+        Car car = new Car();
+        car.drive();
+
     }
 }
