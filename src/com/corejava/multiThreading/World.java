@@ -1,6 +1,6 @@
 package com.corejava.multiThreading;
 
-public class World implements Runnable{
+public class World  implements Runnable{
     @Override
     public void run() {
         for (; ;) {
