@@ -29,7 +29,7 @@ public class ReentrantExample {
 
 
     public static void main(String[] args) {
-        ReentrantExample reentrantExample = new ReentrantExample();
-        reentrantExample.outerMethod();
+//        ReentrantExample reentrantExample = new ReentrantExample();
+//        reentrantExample.outerMethod();
     }
 }
