@@ -4,12 +4,33 @@ class SharedResource{
     private int data;
     private boolean hasDate;
 
-    public void producer(int value){
+    public synchronized void producer(int value){
+        while (hasDate){
+            try {
+                wait();
+            }catch (InterruptedException e){
+                Thread.currentThread().interrupt();
+            }
+        }
 
+        data = value;
+        hasDate = true;
+        System.out.println("Produced: " + value);
+        notify();
     }
 
-    public int consumer(){
-        return 1;
+    public synchronized int consumer(){
+        while (!hasDate){
+            try {
+                wait();
+            }catch (InterruptedException e){
+                Thread.currentThread().interrupt();
+            }
+        }
+        hasDate = false;
+        System.out.println("Consumed: " + data);
+        notify();
+        return data;
     }
     
 }
