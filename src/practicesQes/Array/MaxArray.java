@@ -3,7 +3,7 @@ package practicesQes.Array;
 public class MaxArray {
     public static void main(String[] args) {
 
-//      OneD Array1
+//      OneD Array
         int[] arr = {2, 6, 10, 15, 9};
         int max = arr[0];
         System.out.println(arr[3]);
