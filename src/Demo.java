@@ -33,6 +33,7 @@ public class Demo {
         System.out.println((int) ch);
         System.out.println(hindich);
         System.out.println(symbol);
+        System.out.println(symbol);
 
         System.out.println((char) 10082);
 
