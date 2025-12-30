@@ -22,7 +22,7 @@ public class Demo {
         float num5 = 111.666f;
         double num6 = 111.33333;
 
-        /* Character-
+        /* Character -
             1. char
          */
 
