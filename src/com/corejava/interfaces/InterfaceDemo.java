@@ -28,5 +28,13 @@ public class InterfaceDemo {
 
         electricCar.start();
         dieselCar.start();
+
+        Car car = new Car() {
+            @Override
+            public void start() {
+                System.out.println("Love");
+            }
+        };
+        car.start();
     }
 }
