@@ -30,6 +30,7 @@ public class Employees extends Showroom implements Utility{
         empName = sc.nextLine();
         System.out.println("EMPLOYEE AGE: ");
         empAge = sc.nextInt();
+        sc.nextLine();
         System.out.println("EMPLOYEE DEPARTMENT: ");
         empDepartment = sc.nextLine();
         System.out.println("SHOWROOM NAME: ");

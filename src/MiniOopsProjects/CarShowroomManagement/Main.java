@@ -16,10 +16,76 @@ public class Main {
 
         while (userChoice != 0){
             mainMenu();
-        }
+            userChoice = sc.nextInt();
 
-        switch (userChoice){
-            case 1:
+            while (userChoice != 9 && userChoice != 0){
+                switch (userChoice){
+                    case 1:
+                        showroom[showroomCounter] = new Showroom();
+                        showroom[showroomCounter].setDetails();
+                        showroomCounter++;
+                        System.out.println();
+                        System.out.println("1.ADD NEW SHOWROOM");
+                        System.out.println("9.GO BACK TO MAIN MENU");
+                        userChoice = sc.nextInt();
+                        break;
+                    case 2:
+                        employees[employeesCounter] = new Employees();
+                        employees[employeesCounter].setDetails();
+                        employeesCounter++;
+                        System.out.println();
+                        System.out.println("1.ADD NEW EMPLOYEES");
+                        System.out.println("9.GO BACK TO MAIN MENU");
+                        userChoice = sc.nextInt();
+                        break;
+                    case 3:
+                        cars[carCounter] = new Cars();
+                        cars[carCounter].setDetails();
+                        carCounter++;
+                        System.out.println();
+                        System.out.println("1.ADD NEW CAR");
+                        System.out.println("9.GO BACK TO MAIN MENU");
+                        userChoice = sc.nextInt();
+                        break;
+                    case 4:
+                        for (int i = 0; i < showroomCounter; i++) {
+                            showroom[i].getDetails();
+                            System.out.println();
+                            System.out.println();
+                        }
+                        System.out.println();
+                        System.out.println("9.GO BACK TO MAIN MENU");
+                        System.out.println("0.EXIT");
+                        userChoice = sc.nextInt();
+                        break;
+                    case 5:
+                        for (int i = 0; i < employeesCounter; i++) {
+                            employees[i].getDetails();
+                            System.out.println();
+                            System.out.println();
+                        }
+                        System.out.println();
+                        System.out.println("9.GO BACK TO MAIN MENU");
+                        System.out.println("0.EXIT");
+                        userChoice = sc.nextInt();
+                        break;
+                    case 6:
+                        for (int i = 0; i < carCounter; i++) {
+                            cars[i].getDetails();
+                            System.out.println();
+                            System.out.println();
+                        }
+                        System.out.println();
+                        System.out.println("9.GO BACK TO MAIN MENU");
+                        System.out.println("0.EXIT");
+                        userChoice = sc.nextInt();
+                        break;
+                    default:
+                        System.out.println("ENTER VALID CHOICE");
+                        break;
+
+                }
+            }
         }
     }
 

@@ -12,11 +12,11 @@ public class Showroom implements Utility{
 
     @Override
     public void getDetails() {
-        System.out.print("Showroom Name: " +showroomName);
-        System.out.print("Showroom Address: " +showroomAddress);
-        System.out.print("Manager Name: " +managerName);
-        System.out.print("Total Employees: " +totalEmployees);
-        System.out.print("Total Car In Stock: " +totalCarInStock);
+        System.out.println("Showroom Name: " +showroomName);
+        System.out.println("Showroom Address: " +showroomAddress);
+        System.out.println("Manager Name: " +managerName);
+        System.out.println("Total Employees: " +totalEmployees);
+        System.out.println("Total Car In Stock: " +totalCarInStock);
     }
 
     @Override
