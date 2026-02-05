@@ -26,7 +26,7 @@ public class VectorCode {
 
         // Arraylist Vs Vector
 
-//        ArrayList<Integer> arrayList = new ArrayList<>(); // NonSynchronization
+//      ArrayList<Integer> arrayList = new ArrayList<>(); // NonSynchronization
         Vector<Integer> arrayList = new Vector<>();   // Synchronization
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 1000; i++) {
