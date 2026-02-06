@@ -22,4 +22,4 @@ public class StackCode {
         System.out.println(stack.search(3)); // count start from bottom and index start with 1
 
     }
-}
+ }
