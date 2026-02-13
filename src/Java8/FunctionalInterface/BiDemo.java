@@ -1,8 +1,6 @@
 package Java8.FunctionalInterface;
 
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.BiPredicate;
+import java.util.function.*;
 
 public class BiDemo {
     public static void main(String[] args) {
@@ -23,5 +21,11 @@ public class BiDemo {
         // BiFunction -> takes two value and return one result
         BiFunction<Integer, Integer, Integer> biFunction = (a,b) -> a + b;
         System.out.println(biFunction.apply(4, 5));
+
+        UnaryOperator<Integer> unaryOperator = a -> a * 2;
+        BinaryOperator<Integer> binaryOperator = (a, b) -> a + b;
+
+        System.out.println(unaryOperator.apply(5));
+        System.out.println(binaryOperator.apply(5,6));
     }
 }
