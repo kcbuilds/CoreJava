@@ -1,9 +1,8 @@
 package Java8.Stream;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TerminalOps {
     public static void main(String[] args) {
@@ -39,6 +38,15 @@ public class TerminalOps {
         System.out.println(integerList.stream().findFirst().get());
         System.out.println(integerList.stream().findAny().get());
 
+        //7. toArray
+        Object[] array = Stream.of(1,2,3).toArray();
+
+        // 8. min & max
+        System.out.println(Stream.of(2,6,4,8).max(Comparator.naturalOrder()).get());
+        System.out.println(Stream.of(2,6,4,8).min(Comparator.naturalOrder()).get());
+        System.out.println(Stream.of(2,6,4,8).max((o1, o2) -> o2 - o1));
+
+
         // Example : element that greater than 3character
         List<String> names = Arrays.asList("Anna", "Bob", "Charlie", "David");
         System.out.println(names.stream().filter(x -> x.length() > 3).toList());
@@ -53,5 +61,13 @@ public class TerminalOps {
         // Example : Counting occurs of a character
         String sentence = "Hello World";
         System.out.println(sentence.chars().filter(x -> x == 'l').count()); // String to stream using chars
+
+        //Example
+        // Streams cannot be reused after a terminal operation has been called
+        Stream<String> stream = names.stream();
+        stream.forEach(System.out::println);
+        List<String> list = stream.map(String::toUpperCase).toList(); //IllegalStateException
+
+
     }
 }

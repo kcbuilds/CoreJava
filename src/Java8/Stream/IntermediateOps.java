@@ -41,5 +41,24 @@ public class IntermediateOps  {
         // Both count 100 but different is 5. limit -> 1to100 --> count100
         //                                 6. skip(10) -> 11to110 --> count100
 
+        // Peek
+        Stream.iterate(1, x -> x + 1).skip(10).limit(100).peek(System.out::println).count();
+
+        //Flatmap
+        // Handle streams of collections, lists, or arrays where each element is itself a collection
+        // Flatten nested structures (e.g., lists within lists) so that they can be processed as a single sequence of elements
+        // Transform and flatten elements at the same time.
+
+        List<List<String>> list1 = Arrays.asList(
+                Arrays.asList("Apple", "mango"),
+                Arrays.asList("orange", "kiwi"),
+                Arrays.asList("pear", "grape")
+        );
+        System.out.println(list1.get(1).get(1));
+        System.out.println(list1.stream()
+                .flatMap(x -> x.stream())
+                .map(String::toUpperCase)
+                .toList());
+
     }
 }
