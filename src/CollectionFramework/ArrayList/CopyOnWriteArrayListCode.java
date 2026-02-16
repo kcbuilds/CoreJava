@@ -1,6 +1,5 @@
-package CollectionFramework;
+package CollectionFramework.ArrayList;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 

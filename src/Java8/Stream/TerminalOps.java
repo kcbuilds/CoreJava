@@ -46,6 +46,13 @@ public class TerminalOps {
         System.out.println(Stream.of(2,6,4,8).min(Comparator.naturalOrder()).get());
         System.out.println(Stream.of(2,6,4,8).max((o1, o2) -> o2 - o1));
 
+        // forEachOrdered
+        List<Integer> num = Arrays.asList(1,2,3,4,5);
+        System.out.println("For Each: ");
+        num.parallelStream().forEach(System.out::println);
+        System.out.println("For Each Ordered: ");
+        num.parallelStream().forEachOrdered(System.out::println);
+
 
         // Example : element that greater than 3character
         List<String> names = Arrays.asList("Anna", "Bob", "Charlie", "David");
@@ -66,7 +73,7 @@ public class TerminalOps {
         // Streams cannot be reused after a terminal operation has been called
         Stream<String> stream = names.stream();
         stream.forEach(System.out::println);
-        List<String> list = stream.map(String::toUpperCase).toList(); //IllegalStateException
+//        List<String> list = stream.map(String::toUpperCase).toList(); //IllegalStateException
 
 
     }
