@@ -1,4 +1,4 @@
-package DSA.basic;
+package DSA.Basic;
 
 public class DayTwo {
     public static void main(String[] args) {

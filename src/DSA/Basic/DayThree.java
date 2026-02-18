@@ -1,4 +1,4 @@
-package DSA.basic;
+package DSA.Basic;
 
 public class DayThree {
 
